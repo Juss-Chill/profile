@@ -204,7 +204,7 @@
                 </div>
 
                 <button class="btn btn-outline-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#perception_project_content" aria-expanded="false" aria-controls="perception_project_content">
-                    Show more
+                    Show more (video demonstration included)
                 </button>
                 
                 <!-- Expandable content -->
@@ -221,15 +221,16 @@
                     <figure style="text-align: center; margin: 24px 0 16px 0;">
                         <img src="assets/img/sensor_suite_image_neq.png"
                             alt="Car with attached sensors"
-                            style="width: 720px; max-width: 95%; border-radius: 14px; box-shadow: 0 3px 12px rgba(0,0,0,0.13);">
+                            style="width: 650px; max-width: 95%; border-radius: 10px; box-shadow: 0 3px 12px rgba(0,0,0,0.13);">
                         <figcaption style="font-size: 0.9rem; color: #6c757d; margin-top: 10px; font-style: italic;">
-                            Figure 1: Integrated sensor suite (Camera, LiDAR, IMU, GPS) mounted on the test vehicle.
+                            Figure 1: Integrated sensor suite (Camera, LiDAR, radar, IMU, GPS) mounted on the test vehicle.
                         </figcaption>
                     </figure>
 
                     <ul style="list-style-type: disc; padding-left: 20px;">
                         <li>Development of <b>Detect-Classify-Track-Predict pipeline</b> for ADAS applications using <b>camera, 3D LiDAR, IMU, GPS</b>.</li>
-                        
+                        <li>Multi-Class classification <b>accuracy of 91.3%</b>, and trajectory prediction error of <b>0.69m</b> with <b>execution time &lt; 0.5 seconds</b> for the developed perception and prediction pipeline.</li>
+                    
                         <!-- Replaced div with figure and added figcaption -->
                         <figure style="text-align: center; margin: 24px 0 16px 0;">
                             <video width="600" controls style="border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.13); max-width: 100%;">
@@ -240,9 +241,6 @@
                                 Video 1: Real-time demonstration of the perception and trajectory prediction pipeline.
                             </figcaption>
                         </figure>
-
-                        <li>Localized the ego-vehicle in OpenStreetMap using <b>G.P.S</b> and <b>I.M.U</b> information.</li>
-                        <li>Multi-Class classification <b>accuracy of 91.3%</b>, and trajectory prediction error of <b>0.69m</b> with <b>execution time &lt; 0.5 seconds</b> for the developed perception and prediction pipeline.</li>
                     </ul>
 
                     <div style="margin-top: 16px; padding: 10px; background-color: #f8f9fa; border-radius: 8px; display: inline-block;">

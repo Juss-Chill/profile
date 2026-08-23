@@ -211,42 +211,50 @@
                 <!-- Note: Changed the ID here to 'perception_project_content' so it doesn't conflict with the title span ID -->
                 <div class="collapse" id="perception_project_content">
 
-                    <ul style="list-style-type: disc; padding-left: 20px; margin-top: 14px;">
-                        <li style="margin-bottom: 8px;">
-                            Performed sensor integration and registration; collected time-synchronized multimodal data (<strong>camera</strong>, <strong>LiDAR</strong>, <strong>IMU</strong>, <strong>GPS</strong>) for algorithm evaluation.
-                        </li>
-                    </ul>
+                <!-- Project Details (Rewritten for clarity & keywords) -->
+                <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 24px; color: #253045;">
+                    <li style="margin-bottom: 8px;">
+                        Designed and developed an end-to-end <strong>Detect-Classify-Track-Predict pipeline</strong> for Advanced Driver Assistance Systems (<strong>ADAS</strong>), enabling the vehicle to accurately perceive and navigate through its surroundings.
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        Calibrated and integrated a full sensor suite (<strong>3D LiDAR, Camera, Radar, IMU, GPS</strong>) to capture perfectly time-synchronized, real-world multi-modal data.
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        Achieved high-performance metrics critical for real-time safety: a <strong>91.3% multi-class classification accuracy</strong> and a trajectory prediction error of <strong>0.69 meters</strong>.
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        Execution time for the entire perception and prediction pipeline is <strong>under 0.5 seconds</strong>.
+                    </li>
+                </ul>
 
-                    <!-- Replaced div with figure and added figcaption -->
-                    <figure style="text-align: center; margin: 24px 0 16px 0;">
-                        <img src="assets/img/sensor_suite_image_neq.png"
-                            alt="Car with attached sensors"
-                            style="width: 650px; max-width: 95%; border-radius: 10px; box-shadow: 0 3px 12px rgba(0,0,0,0.13);">
-                        <figcaption style="font-size: 0.9rem; color: #6c757d; margin-top: 10px; font-style: italic;">
-                            Figure 1: Integrated sensor suite (Camera, LiDAR, radar, IMU, GPS) mounted on the test vehicle.
-                        </figcaption>
-                    </figure>
+                <!-- Step 1: The Hardware Setup (Full width to preserve annotations) -->
+                <figure style="text-align: center; margin: 0 auto 40px auto; max-width: 800px;">
+                    <img src="assets/img/sensor_suite_image_neq.png" 
+                        alt="Test vehicle with annotated sensor suite" 
+                        class="img-fluid"
+                        style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); width: 100%;">
+                    <figcaption style="font-size: 0.95rem; color: #6c757d; margin-top: 12px; font-style: italic;">
+                        Figure 1: Hardware Architecture — Annotated sensor suite mounted on the test vehicle.
+                    </figcaption>
+                </figure>
 
-                    <ul style="list-style-type: disc; padding-left: 20px;">
-                        <li>Development of <b>Detect-Classify-Track-Predict pipeline</b> for ADAS applications using <b>camera, 3D LiDAR, IMU, GPS</b>.</li>
-                        <li>Multi-Class classification <b>accuracy of 91.3%</b>, and trajectory prediction error of <b>0.69m</b> with <b>execution time &lt; 0.5 seconds</b> for the developed perception and prediction pipeline.</li>
-                    
-                        <!-- Replaced div with figure and added figcaption -->
-                        <figure style="text-align: center; margin: 24px 0 16px 0;">
-                            <video width="600" controls style="border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.13); max-width: 100%;">
-                                <source src="assets/videos/Thesis_video.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <figcaption style="font-size: 0.9rem; color: #6c757d; margin-top: 10px; font-style: italic;">
-                                Video 1: Real-time demonstration of the perception and trajectory prediction pipeline.
-                            </figcaption>
-                        </figure>
-                    </ul>
+                <!-- Step 2: The Software Results (Cinematic video presentation) -->
+                <figure style="text-align: center; margin: 0 auto 32px auto; max-width: 800px;">
+                    <video controls class="img-fluid" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.15); background-color: #000;">
+                        <source src="assets/videos/Thesis_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption style="font-size: 0.95rem; color: #6c757d; margin-top: 12px; font-style: italic;">
+                        Video 1: Software Execution — Real-time demonstration of the perception and trajectory prediction pipeline.
+                    </figcaption>
+                </figure>
 
-                    <div style="margin-top: 16px; padding: 10px; background-color: #f8f9fa; border-radius: 8px; display: inline-block;">
-                        <b style="color: #283e63;">Tools:</b> C++, Python, ROS, NumPy, OpenCV
-                    </div>
+                <!-- Tools Used -->
+                <div style="margin-bottom: 12px; padding: 10px; background-color: #f8f9fa; border-radius: 8px; display: inline-block;">
+                    <b style="color: #283e63;">Tools & Tech:</b> C++, Python, ROS, NumPy, OpenCV
                 </div>
+                
+            </div>
             </div>
 
             <hr style="border: none; border-top: 2px solid #bbb; margin: 40px 0;">
@@ -262,7 +270,7 @@
                         color: #283e63;
                         display: block;
                         margin-bottom: 8px;">
-                    Trajectory Prediction of Surrounding Vehicles Using Map Infomration
+                    Trajectory Prediction of Surrounding Vehicles Using Map Information
                     </span>
                 
                     <!-- Role and Duration -->
@@ -288,124 +296,79 @@
                     </button>
                 
                     <div class="collapse" id="multihyptheses_trajectory_prediction">
-                        <!-- Project Details with Inline Media -->
-                        <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 12px;">
-                        <li>
-                            Designed a <strong>multi-hypotheses trajectory prediction framework</strong> for real-time autonomous driving scenarios.
-                            <div style="margin-top: 8px; margin-bottom: 16px;">
-                            <img src="assets/img/traj_prediction_concept.png" class="img-fluid rounded shadow-sm" alt="Trajectory Prediction Concept"
-                            style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
-                            <p style="font-size: 0.85rem; text-align: center; margin-top: 4px;">Overall MC-EKF Framework</p>
-                            </div>
+    
+                    <!-- Project Details (Rewritten for clarity & keywords) -->
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 24px; color: #253045;">
+                        <li style="margin-bottom: 8px;">
+                            Engineered a <strong>real-time trajectory prediction system</strong> to forecast future vehicle movements for autonomous driving (ADAS).
                         </li>
-                
-                        <li>
-                            Implemented <strong>map-based pruning</strong> to eliminate infeasible trajectory hypotheses.
+                        <li style="margin-bottom: 8px;">
+                            Integrated <strong>map information</strong> to act as a reality check, automatically filtering out impossible vehicle paths to ensure safer predictions.
                         </li>
-                
-                        <li>
-                            Conducted experiments on <strong>Ackermann steering RC vehicles</strong> with sensor suite integration.
-                            <div style="margin-top: 8px; margin-bottom: 16px;">
-                            <img src="assets/img/traj_prediction_test_track_ackermann_models.png" class="img-fluid rounded shadow-sm" alt="Experimental Setup"
-                            style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
-                            <p style="font-size: 0.85rem; text-align: center; margin-top: 4px;">Experimental Setup with Ackermann Vehicles</p>
-                            </div>
+                        <li style="margin-bottom: 8px;">
+                            Successfully tested and validated the algorithms on a physical track using <strong>Ackermann steering</strong> vehicles.
                         </li>
-                
-                        <li>
-                            Benchmarked performance across multiple motion models; <b>CTRV</b> showed least error with <b>minADE = 0.101 m</b>.
+                        <li style="margin-bottom: 8px;">
+                            Benchmarked multiple physics models to optimize the system, achieving an prediction error of <b>0.101 meters</b>.
+                        </li>
+                    </ul>
 
-                            <div style="max-width: 500px; margin: 0 auto;">
-                                <video controls style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
-                                <source src="assets/videos/traj_pred_demo_cropped.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </li>
-                    
-                        <div class="table-responsive my-4">
-                            <h5 class="fw-bold text-center">Quantitative Results</h5>
-                            <table class="table table-bordered text-center align-middle">
-                            <thead class="table-light">
-                                <tr>
-                                <th>Motion Model</th>
-                                <th>minADE (m)</th>
-                                <th>minFDE (m)</th>
-                                <th>minADE<sub>1</sub> (m)</th>
-                                <th>minFDE<sub>1</sub> (m)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td><b>CV</b></td>
-                                <td>0.108</td>
-                                <td>0.223</td>
-                                <td>0.125</td>
-                                <td>0.232</td>
-                                </tr>
-                                <tr>
-                                <td><b>CA</b></td>
-                                <td>0.159</td>
-                                <td>0.301</td>
-                                <td>0.222</td>
-                                <td>0.334</td>
-                                </tr>
-                                <tr>
-                                <td><b>CSARA</b></td>
-                                <td>0.125</td>
-                                <td>0.194</td>
-                                <td>0.159</td>
-                                <td>0.244</td>
-                                </tr>
-                                <tr>
-                                <td><b>CTRV</b></td>
-                                <td>0.101</td>
-                                <td>0.202</td>
-                                <td>0.121</td>
-                                <td>0.237</td>
-                                </tr>
-                                <tr>
-                                <td><b>CTRA</b></td>
-                                <td>0.166</td>
-                                <td>0.250</td>
-                                <td>0.289</td>
-                                <td>0.364</td>
-                                </tr>
-                            </tbody>
-                            
-                            </table>
-                            <p class="text-muted text-center">
-                            Table: Quantitative comparison of the proposed framework using different motion models for a 3-second prediction horizon.
-                            </p>
+                    <!-- Side-by-side Image Gallery -->
+                    <div class="row mb-4">
+                        <!-- Image 1 -->
+                        <div class="col-md-6 mb-3">
+                            <figure style="text-align: center; height: 100%;">
+                                <img src="assets/img/traj_prediction_concept.png" class="img-fluid rounded" alt="Trajectory Prediction Concept" style="max-height: 250px; object-fit: contain; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+                                <figcaption style="font-size: 0.85rem; color: #6c757d; margin-top: 8px; font-style: italic;">
+                                    Figure 1: The underlying MC-EKF algorithm framework.
+                                </figcaption>
+                            </figure>
                         </div>
-                        </ul>
-                
-                        <!-- Tools Used -->
-                        <div style="font-size: 0.95rem;">
-                        <b>Tools:</b> Python, ROS, NumPy, Matplotlib, OpenCV
+                        <!-- Image 2 -->
+                        <div class="col-md-6 mb-3">
+                            <figure style="text-align: center; height: 100%;">
+                                <img src="assets/img/traj_prediction_test_track_ackermann_models.png" class="img-fluid rounded" alt="Experimental Setup" style="max-height: 250px; object-fit: contain; box-shadow: 0 3px 12px rgba(0,0,0,0.1);">
+                                <figcaption style="font-size: 0.85rem; color: #6c757d; margin-top: 8px; font-style: italic;">
+                                    Figure 2: Real-world testing with Ackermann steering vehicles.
+                                </figcaption>
+                            </figure>
                         </div>
+                    </div>
 
-                        <!-- Expand/Collapse button -->
-                        <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#awardImages" aria-expanded="false" aria-controls="awardImages">
-                            View Award Images
+                    <!-- Final Results Video -->
+                    <figure style="text-align: center; margin: 24px 0;">
+                        <video width="600" controls style="border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.13); max-width: 100%;">
+                            <source src="assets/videos/traj_pred_demo_cropped.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption style="font-size: 0.9rem; color: #6c757d; margin-top: 10px; font-style: italic;">
+                            Video 1: Demonstration of the trajectory prediction mapping in action.
+                        </figcaption>
+                    </figure>
+
+                    <!-- Tools Used (Styled to match your previous section) -->
+                    <div style="margin-bottom: 24px; padding: 10px; background-color: #f8f9fa; border-radius: 8px; display: inline-block;">
+                        <b style="color: #283e63;">Tools & Tech:</b> Python, ROS, NumPy, Matplotlib, OpenCV
+                    </div>
+
+                    <!-- Expand/Collapse button for Certificate -->
+                    <div style="margin-top: 8px;">
+                        <button class="btn btn-sm btn-outline-secondary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#awardImages" aria-expanded="false" aria-controls="awardImages">
+                            View STPEC Presentation Certificate
                         </button>
-                    
+                        
                         <!-- Collapsible image gallery -->
                         <div class="collapse" id="awardImages">
                             <div class="row g-3">
-                            <div class="col-md-4">
-                                <img src="assets/img/conferences/STPEC_2025.jpg" class="img-fluid rounded shadow-sm" alt="STPEC presentation">
-                            </div>
+                                <div class="col-md-5">
+                                    <img src="assets/img/conferences/STPEC_2025.jpg" class="img-fluid rounded shadow-sm" alt="STPEC participation certificate" style="border: 1px solid #dee2e6;">
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
-
-
-  
-                
-
-
+                </div>
 
 
 
@@ -420,12 +383,16 @@
                           color: #283e63;
                           display: block;
                           margin-bottom: 8px;">
-                      Fusion of Geometric and Kinematic Features for LiDAR-Based Vehicle Classification
+                      LiDAR-Based Vehicle Classification using Trajectory and Geometric Features
                     </span>
                   
                     <!-- Role and Duration -->
                     <div style="font-size: 1rem; color: #253045; margin-bottom: 6px;">
-                      Role: <b>Research Scholar (M.S.)</b> &nbsp;|&nbsp; Jun 2025 – present
+                      Role: <b>Research Scholar (M.S.)</b> &nbsp;|&nbsp; Jun 2025 – Sep 25
+                    </div>
+
+                    <div style="font-size: 0.95rem; color: #1a73e8; font-weight: 600; margin-bottom: 12px;">
+                        DOI: <a href="https://doi.org/10.1109/APSCON68325.2026.11497160" target="_blank" rel="noopener noreferrer" style="color: #1a73e8; text-decoration: underline;">10.1109/APSCON68325.2026.11497160</a>
                     </div>
                   
                     <!-- Supervisors -->
@@ -437,92 +404,63 @@
                         Show more
                     </button>
 
-                    <!-- Expandable content -->
                     <div class="collapse" id="lidar_classification_project">
-                        <!-- <summary style="cursor:pointer; color:#0066cc; font-weight:600; margin-bottom:12px;">
-                        ➤ Show more
-                        </summary> -->
-                        <div style="margin-top: 12px;">
-                  
-                        <!-- Motivation / Project Overview -->
-                        <div style="font-style: italic; font-size: 0.95rem; color: #555; margin-bottom: 20px;">
-                            <p>
-                            Motivated by challenges in <strong>vision-based vehicle classification</strong> under adverse environmental conditions, this project leverages <strong>LiDAR’s robustness</strong> to lighting and weather(dust, smog, haze), aiming to improve distinguishing similar vehicle shapes with fused geometric and kinematic features.
-                            While <strong>cameras suffer from quality degradation</strong> in varying light, <strong>LiDAR provides reliable depth and geometry information</strong>, making it ideal for this task.
-                            <strong>RADAR</strong> provides similar features as LiDAR but at a <strong>lower cost</strong>, offers <strong>better velocity estimates</strong> of surrounding vehicles, but has <strong>reduced field of view (FoV)</strong>, which can be mitigated by using multiple RADAR sensors.
-                            </p>
-                        </div>
-                  
-                        <!-- Project Details -->
-                        <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 12px;">
-                        <li>
-                            Developed a <strong>LiDAR-only vehicle classification framework</strong> by integrating geometric and kinematic features to resolve ambiguities between similarly shaped vehicles such as bicycles and motorcycles.
-                        </li>
-                        <li>
-                            Applied machine learning models including <strong>Random Forest</strong> and <strong>XGBoost</strong> with feature augmentation, achieving a <strong>+4% accuracy gain on challenging classes</strong> and an overall accuracy of <strong>89% on the NuScenes dataset</strong>.
-                        </li>
-                        <li>
-                            Carefully curated vehicle classes to focus on challenging geometric similarities.
-                        </li>
-                        <li>
-                            <strong>Ongoing research</strong> includes development of deep neural networks for kinematic feature extraction and trajectory prediction tailored by vehicle category.
-                        </li>
+                    <div style="margin-top: 16px;">
+                        
+                        <!-- Project Details (Rewritten for clarity & keywords) -->
+                        <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 32px; color: #253045;">
+                            <li style="margin-bottom: 8px;">
+                                Engineered <strong>LiDAR-only vehicle classification framework</strong> that relies entirely on 3D point clouds, without the need for a camera.
+                            </li>
+                            <li style="margin-bottom: 8px;">
+                                Solves complex edge-cases, such as distinguishing a motorcycle from a bicycle, by fusing static <strong>geometric shapes</strong> with dynamic <strong>kinematic movement features</strong>.
+                            </li>
+                            <li style="margin-bottom: 8px;">
+                                Trained and optimized machine learning models to evaluate the pipeline against the standard <strong>nuScenes dataset</strong>.
+                            </li>
+                            <li style="margin-bottom: 8px;">
+                                Achieved <strong>89% overall accuracy</strong>, including a <strong>+4% performance boost</strong> on geometrically challenging vehicle classes.
+                            </li>
                         </ul>
-                    
-                        <!-- confusion matrix -->
-                        <div style="text-align: center; margin: 24px 0;">
-                            <img src="assets/img/conf_mat.png" alt="Confusion Matrix for Vehicle Classification"
-                                style="width: 480px; max-width: 90%; border-radius: 10px; box-shadow: 0 3px 12px rgba(0,0,0,0.15);">
-                            <div style="font-size:0.96rem; color:#666; margin-top:6px;">
-                                <em>Confusion matrix computed on real-world <strong>NuScenes</strong> dataset.</em>
+
+                        <!-- Side-by-side Image Gallery for Diagrams -->
+                        <div class="row align-items-center mb-4">
+                            
+                            <!-- Feature Extraction Pipeline -->
+                            <div class="col-md-6 mb-4 mb-md-0">
+                                <figure style="text-align: center; margin: 0; height: 100%;">
+                                    <img src="assets/img/feat_extract.png" 
+                                        alt="Feature extraction pipeline for vehicle classification" 
+                                        class="img-fluid"
+                                        style="border-radius: 1px; box-shadow: 0 3px 12px rgba(0,0,0,0.12); max-height: 400px; object-fit: contain;">
+                                    <figcaption style="font-size: 0.9rem; color: #6c757d; margin-top: 12px; font-style: italic;">
+                                        Figure 1: Feature extraction pipeline fusing geometric and kinematic data.
+                                    </figcaption>
+                                </figure>
                             </div>
+                            
+                            <!-- Confusion Matrix -->
+                            <div class="col-md-6">
+                                <figure style="text-align: center; margin: 0; height: 100%;">
+                                    <img src="assets/img/conf_mat.png" 
+                                        alt="Confusion Matrix evaluated on NuScenes dataset" 
+                                        class="img-fluid"
+                                        style="border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.12); max-height: 280px; object-fit: contain;">
+                                    <figcaption style="font-size: 0.9rem; color: #6c757d; margin-top: 12px; font-style: italic;">
+                                        Figure 2: Confusion matrix computed on the real-world nuScenes dataset.
+                                    </figcaption>
+                                </figure>
+                            </div>
+
                         </div>
-                    
-                        <!-- Accuracy table -->
-                        <div style="font-size:0.93rem; color:#888; margin-bottom:6px;">
-                            <em>Accuracy results on the <strong>NuScenes</strong> dataset:</em>
-                        </div>
-                        <div style="overflow-x: auto; margin: 20px 0;">
-                            <table style="border-collapse: collapse; width: 100%; font-size: 0.98rem;">
-                            <thead>
-                                <tr style="background-color: #f0f4f8;">
-                                <th style="padding: 8px; border: 1px solid #ddd;">Classifier</th>
-                                <th style="padding: 8px; border: 1px solid #ddd;">Features</th>
-                                <th style="padding: 8px; border: 1px solid #ddd;">Accuracy</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td style="padding: 8px; border: 1px solid #ddd;">Random Forest</td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">Geometric</td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">0.86</td>
-                                </tr>
-                                <tr>
-                                <td style="padding: 8px; border: 1px solid #ddd;">Random Forest</td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">Geometric + Kinematic</td>
-                                <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; text-decoration: underline;">0.87</td>
-                                </tr>
-                                <tr>
-                                <td style="padding: 8px; border: 1px solid #ddd;">XGBoost</td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">Geometric</td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">0.86</td>
-                                </tr>
-                                <tr>
-                                <td style="padding: 8px; border: 1px solid #ddd;">XGBoost</td>
-                                <td style="padding: 8px; border: 1px solid #ddd;">Geometric + Kinematic</td>
-                                <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; text-decoration: underline;">0.89</td>
-                                </tr>
-                            </tbody>
-                            </table>
+
+                         <!-- Tools Used (Styled to match your previous section) -->
+                        <div style="margin-bottom: 24px; padding: 10px; background-color: #f8f9fa; border-radius: 8px; display: inline-block;">
+                            <b style="color: #283e63;">Tools & Tech:</b> Python, NumPy, Pandas, Scikit-learn, XGBoost, ROS, OpenCV
                         </div>
                         
-                  
-                        <!-- Tools Used -->
-                        <div style="font-size: 0.95rem;">
-                            <b>Tools:</b> Python, NumPy, Pandas, Scikit-learn, XGBoost, ROS, OpenCV
-                            </div>
-                        </div>
                     </div>
+                </div>
                 
                   </div>
                 </div>

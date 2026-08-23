@@ -187,63 +187,71 @@
               
                   <!-- Perception stack for Autonmous Driving -->
                   <div class="mb-5">
-                    <span id="perception_project" style="
-                      font-size: 1.3rem;
-                      font-style: italic;
-                      font-weight: 700;
-                      color: #283e63;
-                      display: block;
-                      margin-bottom: 4px;">
-                      Development of Perception and Prediction Capabilities for Autonomous Driving Applications
-                    </span>
-                    <div style="font-size: 1rem; color: #253045; margin-top: 2px;">
-                      Role: <b>Research Scholar (M.S.)</b>
-                    </div>
-                    <div style="font-size: 0.95rem; margin-bottom: 8px;">
-                      <b>Supervisors:</b> Dr. Bijo Sebastian (Autonomous Systems Lab), Dr. Lelitha Vanajakshi (Intelligent Transportation Systems Lab)
-                    </div>
+                <span id="perception_project" style="
+                font-size: 1.3rem;
+                font-style: italic;
+                font-weight: 700;
+                color: #283e63;
+                display: block;
+                margin-bottom: 4px;">
+                Development of Perception and Prediction Capabilities for Autonomous Driving Applications
+                </span>
+                <div style="font-size: 1rem; color: #253045; margin-top: 2px;">
+                Role: <b>Research Scholar (M.S.)</b>
+                </div>
+                <div style="font-size: 0.95rem; margin-bottom: 8px;">
+                <b>Supervisors:</b> Dr. Bijo Sebastian (Autonomous Systems Lab), Dr. Lelitha Vanajakshi (Intelligent Transportation Systems Lab)
+                </div>
 
-                    <button class="btn btn-outline-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#perception_project">
-                        Show more
-                    </button>
-                    
-                    <!-- Expandable content -->
-                    <div class="collapse" id="perception_project">
+                <button class="btn btn-outline-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#perception_project_content" aria-expanded="false" aria-controls="perception_project_content">
+                    Show more
+                </button>
+                
+                <!-- Expandable content -->
+                <!-- Note: Changed the ID here to 'perception_project_content' so it doesn't conflict with the title span ID -->
+                <div class="collapse" id="perception_project_content">
 
-                        <ul style="list-style-type: disc; padding-left: 20px; margin-top: 14px;">
+                    <ul style="list-style-type: disc; padding-left: 20px; margin-top: 14px;">
                         <li style="margin-bottom: 8px;">
                             Performed sensor integration and registration; collected time-synchronized multimodal data (<strong>camera</strong>, <strong>LiDAR</strong>, <strong>IMU</strong>, <strong>GPS</strong>) for algorithm evaluation.
                         </li>
-                        </ul>
+                    </ul>
 
-                        <div style="text-align: center; margin: 20px 0 8px 0;">
+                    <!-- Replaced div with figure and added figcaption -->
+                    <figure style="text-align: center; margin: 24px 0 16px 0;">
                         <img src="assets/img/sensor_suite_image_neq.png"
                             alt="Car with attached sensors"
                             style="width: 720px; max-width: 95%; border-radius: 14px; box-shadow: 0 3px 12px rgba(0,0,0,0.13);">
-                        </div>
+                        <figcaption style="font-size: 0.9rem; color: #6c757d; margin-top: 10px; font-style: italic;">
+                            Figure 1: Integrated sensor suite (Camera, LiDAR, IMU, GPS) mounted on the test vehicle.
+                        </figcaption>
+                    </figure>
 
-                        <ul style="list-style-type: disc; padding-left: 20px;">
-                        <li>Development of <b>Detect-Classify-Track pipeline</b> for ADAS applications using <b>camera, 3D LiDAR, IMU, GPS</b>.</li>
-                        <li>Performed object detection on 3D LiDAR point clouds using <b>DBSCAN</b> clustering and ground plane segmentation with <b>RANSAC</b>; fused classification with <b>YOLOv8</b> from camera images (via LiDAR–camera calibration).</li>
-                        <li>Tracked vehicles using an <b>EKF</b> and performed data association using <b>Mahalanobis distance</b> and <b>Hungarian algorithm</b>.</li>
-                        <div style="margin: 20px 0; text-align: center;">
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Development of <b>Detect-Classify-Track-Predict pipeline</b> for ADAS applications using <b>camera, 3D LiDAR, IMU, GPS</b>.</li>
+                        
+                        <!-- Replaced div with figure and added figcaption -->
+                        <figure style="text-align: center; margin: 24px 0 16px 0;">
                             <video width="600" controls style="border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.13); max-width: 100%;">
-                            <source src="assets/videos/Thesis_video.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
+                                <source src="assets/videos/Thesis_video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
                             </video>
-                        </div>
-                        <li>Localized the ego-vehicle in OpenStreetMap using <b>G.P.S</b> and <b>I.M.U</b> information.</li>
-                        <li>Classification <b>accuracy of 62%</b> with <b>execution time &lt; 0.5 seconds</b> for the developed perception pipeline.</li>
-                        </ul>
+                            <figcaption style="font-size: 0.9rem; color: #6c757d; margin-top: 10px; font-style: italic;">
+                                Video 1: Real-time demonstration of the perception and trajectory prediction pipeline.
+                            </figcaption>
+                        </figure>
 
-                        <div style="margin-top: 8px;">
-                        <b>Tools:</b> C++, Python, ROS, NumPy, OpenCV
-                        </div>
+                        <li>Localized the ego-vehicle in OpenStreetMap using <b>G.P.S</b> and <b>I.M.U</b> information.</li>
+                        <li>Multi-Class classification <b>accuracy of 91.3%</b>, and trajectory prediction error of <b>0.69m</b> with <b>execution time &lt; 0.5 seconds</b> for the developed perception and prediction pipeline.</li>
+                    </ul>
+
+                    <div style="margin-top: 16px; padding: 10px; background-color: #f8f9fa; border-radius: 8px; display: inline-block;">
+                        <b style="color: #283e63;">Tools:</b> C++, Python, ROS, NumPy, OpenCV
                     </div>
-                  </div>
-                  
-                  <!-- <hr style="border: 0; border-top: 1px solid #ddd; margin: 40px 0;"> -->
-                  <hr style="border: none; border-top: 2px solid #bbb; margin: 40px 0;">
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 2px solid #bbb; margin: 40px 0;">
 
 
                 <!-- Project 2 : Multi Hypotheses Vehicle Trajectory prediction -->
